@@ -1,0 +1,17 @@
+[submodule "bundle/nerdtree"]
+	path = bundle/nerdtree
+	url = git@github.com:preservim/nerdtree.git
+[submodule "bundle/vim-indent-guides"]
+	path = bundle/vim-indent-guides
+	url = git@github.com:preservim/vim-indent-guides.git
+[submodule "bundle/vim-sensible"]
+	path = bundle/vim-sensible
+	url = https://github.com/tpope/vim-sensible.git
+[submodule "bundle/vim-windowswap"]
+	path = bundle/vim-windowswap
+	url = git@github.com:wesQ3/vim-windowswap.git
+[submodule "vim-sensible"]
+	url = git@github.com:tpope/vim-sensible.git
+[submodule "pack/themes/start/vim-code-dark"]
+	path = pack/themes/start/vim-code-dark
+	url = git@github.com:tomasiser/vim-code-dark.git
