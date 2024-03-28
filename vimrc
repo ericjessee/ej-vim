@@ -13,7 +13,7 @@ colorscheme codedark
 " word wrapping off by default
 set nowrap
 " indentation guides on by default. Turn off with :IndentGuidesDisable
-let g:indent_guides_enable_on_vim_startup = 1
+"let g:indent_guides_enable_on_vim_startup = 1
 
 " auto install of vim-plug 
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
@@ -24,8 +24,11 @@ endif
 
 call plug#begin()
 " on first startup call :PlugUpdate to install these
+" note: you'll want to install clangd -- i guess by doing :LspInstallServer
+" inside a c file??
 Plug 'prabirshrestha/vim-lsp'
 Plug 'mattn/vim-lsp-settings'
+Plug 'm-pilia/vim-ccls'
 
 " Register ccls C++ lanuage server.
 if executable('ccls')
@@ -46,5 +49,8 @@ nn <silent> <M-a> :LspWorkspaceSymbol<cr>
 nn <silent> <M-l> :LspDocumentSymbol<cr>
 
 let g:lsp_semantic_enabled = 1
+"highlight lspReference ctermfg=white guifg=white ctermbg=darkgrey guibg=darkgrey
+let g:lsp_diagnostics_echo_cursor = 1
+let g:lsp_diagnostics_enabled = 0
 
 call plug#end()
