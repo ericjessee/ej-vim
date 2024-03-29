@@ -29,8 +29,11 @@ call plug#begin()
 Plug 'prabirshrestha/vim-lsp'
 Plug 'mattn/vim-lsp-settings'
 Plug 'm-pilia/vim-ccls'
+call plug#end()
 
 " Register ccls C++ lanuage server.
+" I don't think this is doing anything since I installed clang through
+" vim-lsp??
 if executable('ccls')
    au User lsp_setup call lsp#register_server({
       \ 'name': 'ccls',
@@ -50,7 +53,9 @@ nn <silent> <M-l> :LspDocumentSymbol<cr>
 
 let g:lsp_semantic_enabled = 1
 "highlight lspReference ctermfg=white guifg=white ctermbg=darkgrey guibg=darkgrey
+" this will make the diagnostics messages appear at the bottom following the
+" cursor:
 let g:lsp_diagnostics_echo_cursor = 1
+" disable diagnostics by default(they're annoying if the project isn't set up)
 let g:lsp_diagnostics_enabled = 0
 
-call plug#end()
