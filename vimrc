@@ -10,6 +10,7 @@ filetype plugin indent on
 let g:codedark_term256=1
 set t_ut=
 colorscheme codedark
+set mouse=a
 " word wrapping off by default
 set nowrap
 " indentation guides on by default. Turn off with :IndentGuidesDisable
