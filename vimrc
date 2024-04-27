@@ -1,3 +1,8 @@
+"various commands to remember:
+":%s/^M//g -- replace windows newline chars with normal ones
+"view as hex: :%!xxd (then reverse with %!xxd -r)
+"
+
 " show existing tab with 4 spaces width
 set tabstop=4
 " when indenting with '>', use 4 spaces width
@@ -10,7 +15,7 @@ filetype plugin indent on
 let g:codedark_term256=1
 set t_ut=
 colorscheme codedark
-set mouse=a
+"set mouse=a "enable mouse scrolling
 " word wrapping off by default
 set nowrap
 " indentation guides on by default. Turn off with :IndentGuidesDisable
